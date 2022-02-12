@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+table {
+    border-collapse: collapse; 
+}
+
+tr {
+    height: 100px;
+}
+
+td {
+    width: 100px;
+}
+
+td:not(:first-of-type){
+    border-left: solid 1px red;
+}
+
+tr:not(:first-of-type){
+    border-top: solid 1px red;
+}
