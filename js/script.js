@@ -25,8 +25,6 @@
       }
     };
     generateTable();
-
-    //Add event for clicking element;
     let firstPlayer = 0;
     let secondPlayer = 1;
 
@@ -50,25 +48,41 @@
         console.log('powtórz');
       }
     };
+    const removeListeners = function() {
+      const rows = document.querySelectorAll('tr');
+      for(let row of rows){
+        const cols = row.querySelectorAll('td');
+        for(let col of cols){
+          col.removeEventListener('click');
+        }
+      }
+    };
+    const addEventListeners = function() {
+      const rows = document.querySelectorAll('tr');
 
+      for(let row of rows){
+        const cols = row.querySelectorAll('td');
+
+        for(let col of cols){
+          col.addEventListener('click', titleClickHandler);
+        }
+      }
+    };
     const titleClickHandler = function(event){
       event.preventDefault();
       const clickedElement = this;
-      ticOrTok(clickedElement);
+      ticOrTak(clickedElement);
       console.log(`firstPlayer${firstPlayer}`);
     };
-
+    addEventListeners();
     //call to event listener
-    const tok = document.querySelectorAll('tr');
-
-    for(let tik of tok){
-      const toe = tik.querySelectorAll('td');
-
-      for(let cell of toe){
-        cell.addEventListener('click', titleClickHandler);
-      }
-    }
-
   };
+
   playGame();
+
+
+  document.getElementById('restartButton').addEventListener('click', function() {
+    document.getElementById('tictoc').innerHTML = '';
+    playGame();
+  });
 }
