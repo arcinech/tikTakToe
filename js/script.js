@@ -111,7 +111,7 @@
             console.log(winCondition);
             winCondition++;
           }
-          if (winCondition == 2) return true;
+          if (winCondition == (boardSize-1)) return true;
         }
       }
       return false;
@@ -124,7 +124,7 @@
           if ((tiktokArray[row][col] == tiktokArray[row+1][col]) && (tiktokArray[row][col] != '')){
             winCondition++;
           }
-          if (winCondition == 2) return true;
+          if (winCondition == (boardSize-1)) return true;
         }
       }
       return false;
@@ -140,7 +140,7 @@
           console.log(winCondition);
         }
         //  console.log(winCondition);
-        if (winCondition == 2) return true;
+        if (winCondition == (boardSize-1)) return true;
       }
       return false;
     };
@@ -153,7 +153,7 @@
         if ((tiktokArray[row][col] == tiktokArray[row-1][col+1]) && (tiktokArray[row][col] != '')){
           winCondition++;
         }
-        if (winCondition == 2) return true;
+        if (winCondition == (boardSize-1)) return true;
         col++;
       }
       return false;
