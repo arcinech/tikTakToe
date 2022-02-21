@@ -13,9 +13,10 @@
         <section class="game">
           <div class="container">
             <div id="prompt">
-                <h3>Generate your board</h3>
-              <input type="number" min="3" max="10" id="boardSize" placeholder="Size of board min 3 max 10">
-              <button type="submit" id="submitSize">Generate</button>
+              <h3>Generate your board</h3>
+              <p>Size of board between 3 to 10</p>
+              <input type="number" class="btn boardsize" min="3" max="10" id="boardSize" placeholder="Board size">
+              <button type="submit" class="btn btn-one" id="submitSize">Generate</button>
             </div>
             <div class="board">
               <h2 id="board-title" class="hidden">Tik Tok Toes Game Board</h2>
@@ -28,7 +29,7 @@
         <section class="information">
           <div class="container">
             <div id="messages" class="messages"></div>
-            <button type="reset" id="restartButton">Restart</button>
+            <button type="reset" class="btn btn-two" id="restartButton">Restart</button>
           </div>
         </section>
         <section class="rules">
@@ -44,7 +45,7 @@
         </section>
         <footer class="page-footer">
           <div class="container">
-               <p class="footer"><i class="far fa-copyright">Copyright by Marcin Lech</i></p>
+            <p class="footer"><i class="far fa-copyright">Copyright by Marcin Lech</i></p>
           </div>
       </footer>
         <script src="js/script.js"></script>
