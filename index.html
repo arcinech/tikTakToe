@@ -3,18 +3,50 @@
     <head>
         <meta charset="UTF-8">
         <title>Kółko i krzyżyk</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+      <header class="splash">
+        <h1>Tik Tak Toes game</h1>
+      </header>
         <section class="game">
-            <table class="tictocOuter">
+          <div class="container">
+            <div id="prompt">
+                <h3>Generate your board</h3>
+              <input type="number" min="3" max="10" id="boardSize" placeholder="Size of board min 3 max 10">
+              <button type="submit" id="submitSize">Generate</button>
+            </div>
+            <div class="board">
+              <h2 id="board-title" class="hidden">Tik Tok Toes Game Board</h2>
+              <table class="tictocOuter">
                 <tbody id="tictoc"></tbody>
-            </table>
+              </table>
+            </div>
+          </div>
         </section>
         <section class="information">
-            <div class="message"></div>
-            <button type="restart" id="restartButton">Restart</button>
+          <div class="container">
+            <div id="messages" class="messages"></div>
+            <button type="reset" id="restartButton">Restart</button>
+          </div>
         </section>
+        <section class="rules">
+          <div class="container">
+            <h4 class="rules-title">Instructions</h4>
+            <ul>
+              <li>Take turns for plaing x mark and cicle</li>
+              <li>You can't overwrite alery ocupied space</li>
+              <li>You win when you get line across board</li>
+              <li>Line can be vertical, horizontal, or diagonal</li>
+            </ul>
+          </div>
+        </section>
+        <footer class="page-footer">
+          <div class="container">
+               <p class="footer"><i class="far fa-copyright">Copyright by Marcin Lech</i></p>
+          </div>
+      </footer>
         <script src="js/script.js"></script>
     </body>
 </html>
