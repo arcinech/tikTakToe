@@ -8,7 +8,7 @@ body {
     margin: 0;
 }
 table {
-    border-collapse: collapse; 
+    border-collapse: collapse;
 }
 
 tr {
@@ -17,6 +17,7 @@ tr {
 
 td {
     width: 100px;
+    font-size: 80px;
 }
 
 td:not(:first-of-type){
@@ -25,4 +26,34 @@ td:not(:first-of-type){
 
 tr:not(:first-of-type){
     border-top: solid 1px red;
+}
+
+.hidden {
+  display: none;
+}
+
+.circle {
+    position: relative;
+
+    &::before{
+        content: "\f111";
+        font-family: "Font Awesome 5 Free";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.xmark {
+    position: relative;
+
+    &::before{
+        content: "\58";
+        font-family: "Font Awesome 5 Free";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
