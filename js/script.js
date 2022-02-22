@@ -1,4 +1,4 @@
-'use strickt';
+'use strict';
 {
   const printMessage = function(msg){
     let div = document.createElement('div');
