@@ -60,17 +60,17 @@
           elementClassList.add('xmark', 'played');
           tiktokArray[row][col] = 'X';
           console.log(tiktokArray);
-          checkWin('Player with X');
+          checkWin('Winner is player with x mark');
           firstPlayer = 1;
         } else {
           elementClassList.add('circle', 'played');
           tiktokArray[row][col] = 'O';
           console.log(tiktokArray[row][col]);
-          checkWin('Player with O');
-          firstPlayer = 0;3;
+          checkWin('Winner is player with circle');
+          firstPlayer = 0;
         }
       } else {
-        console.log('powtórz');
+        console.log('repeat');
       }
     };
 
